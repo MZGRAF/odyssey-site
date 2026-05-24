@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>ODYSSEY</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- ========================= -->
+<!-- MENU -->
+<!-- ========================= -->
+
+<nav>
+
+    <div class="logo-block">
+
+        <img src="logo.png" alt="Logo">
+
+        <h1>ODYSSEY</h1>
+
+    </div>
+
+    <ul>
+
+        <li>
+            <a href="#hero">Главная</a>
+        </li>
+
+        <li>
+            <a href="#models">Модели</a>
+        </li>
+
+        <li>
+            <a href="#tech">Технологии</a>
+        </li>
+
+        <li>
+            <a href="#contacts">Контакты</a>
+        </li>
+
+    </ul>
+
+</nav>
+
+<!-- ========================= -->
+<!-- HERO -->
+<!-- ========================= -->
+
+<section class="hero" id="hero">
+
+    <div class="hero-text">
+
+        <p class="small-text">
+
+            БУДУЩЕЕ. СОВЕРШЕНСТВО. ODYSSEY.
+
+        </p>
+
+        <h2>ODYSSEY</h2>
+
+        <p class="description">
+
+            Odyssey — автомобильный бренд
+            люксового класса,
+            создающий будущее уже сегодня.
+            Мы объединяем инновационные технологии,
+            премиальный комфорт
+            и футуристичный дизайн.
+
+        </p>
+
+        <button onclick="scrollToModels()">
+
+            УЗНАТЬ БОЛЬШЕ
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- MODELS -->
+<!-- ========================= -->
+
+<section class="models" id="models">
+
+    <h3>НАШИ МОДЕЛИ</h3>
+
+    <div class="cards">
+
+        <!-- FALCON -->
+
+        <div class="card"
+             onclick="openCar(
+             'Odyssey Falcon',
+             'Футуристичный спортивный седан с гибридной силовой установкой.',
+             'falcon.png',
+             '680 л.с.',
+             '3.2 сек.',
+             '700 км'
+             )">
+
+            <img src="falcon.png" alt="Falcon">
+
+            <h4>Odyssey Falcon</h4>
+
+            <p>
+
+                Футуристичный спортивный седан
+                нового поколения.
+
+            </p>
+
+        </div>
+
+        <!-- PHANTOM -->
+
+        <div class="card"
+             onclick="openCar(
+             'Odyssey Phantom',
+             'Максимальный комфорт и автономное управление.',
+             'phantom.png',
+             '720 л.с.',
+             '3.8 сек.',
+             '820 км'
+             )">
+
+            <img src="phantom.png" alt="Phantom">
+
+            <h4>Odyssey Phantom</h4>
+
+            <p>
+
+                Максимальный комфорт
+                и инновационные технологии.
+
+            </p>
+
+        </div>
+
+        <!-- ECLIPSE -->
+
+        <div class="card"
+             onclick="openCar(
+             'Odyssey Eclipse',
+             'Электрическое luxury coupe нового поколения.',
+             'eclipse.png',
+             '640 л.с.',
+             '2.9 сек.',
+             '760 км'
+             )">
+
+            <img src="eclipse.png" alt="Eclipse">
+
+            <h4>Odyssey Eclipse</h4>
+
+            <p>
+
+                Электрический luxury coupe
+                нового поколения.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- TECHNOLOGIES -->
+<!-- ========================= -->
+
+<section class="tech-section" id="tech">
+
+    <h3>ТЕХНОЛОГИИ</h3>
+
+    <div class="tech-cards">
+
+        <!-- CARD 1 -->
+
+        <div class="tech-card">
+
+            <h4>AI PILOT</h4>
+
+            <p>
+
+                Интеллектуальная система
+                автономного управления нового поколения.
+
+            </p>
+
+        </div>
+
+        <!-- CARD 2 -->
+
+        <div class="tech-card">
+
+            <h4>QUANTUM DRIVE</h4>
+
+            <p>
+
+                Электрическая силовая установка
+                с мгновенным ускорением.
+
+            </p>
+
+        </div>
+
+        <!-- CARD 3 -->
+
+        <div class="tech-card">
+
+            <h4>NEURAL INTERIOR</h4>
+
+            <p>
+
+                Интерьер, адаптирующийся
+                под водителя в реальном времени.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- CONTACTS -->
+<!-- ========================= -->
+
+<footer id="contacts">
+
+    <h3>ODYSSEY</h3>
+
+    <p>
+
+        luxury@odyssey.com
+
+    </p>
+
+    <p>
+
+        +1 (800) 777-ODYSSEY
+
+    </p>
+
+    <div class="footer-line"></div>
+
+    <span>
+
+        © 2025 ODYSSEY Automobile company. ALL RIGHTS RESERVED.
+
+    </span>
+
+</footer>
+
+<!-- ========================= -->
+<!-- POPUP -->
+<!-- ========================= -->
+
+<div class="popup" id="popup">
+
+    <div class="popup-content">
+
+        <span class="close"
+              onclick="closePopup()">×</span>
+
+        <img id="popup-image"
+             src=""
+             alt="">
+
+        <h2 id="popup-title"></h2>
+
+        <p id="popup-description"></p>
+
+        <!-- STATS -->
+
+        <div class="stats">
+
+            <div class="stat-box">
+
+                <h5 id="stat-power"></h5>
+
+                <span>МОЩНОСТЬ</span>
+
+            </div>
+
+            <div class="stat-box">
+
+                <h5 id="stat-speed"></h5>
+
+                <span>0-100 КМ/Ч</span>
+
+            </div>
+
+            <div class="stat-box">
+
+                <h5 id="stat-range"></h5>
+
+                <span>ЗАПАС ХОДА</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ========================= -->
+<!-- SCRIPT -->
+<!-- ========================= -->
+
+<script>
+
+function openCar(
+    title,
+    description,
+    image,
+    power,
+    speed,
+    range
+) {
+
+    document.getElementById("popup")
+        .style.display = "flex";
+
+    document.getElementById("popup-title")
+        .innerText = title;
+
+    document.getElementById("popup-description")
+        .innerText = description;
+
+    document.getElementById("popup-image")
+        .src = image;
+
+    document.getElementById("stat-power")
+        .innerText = power;
+
+    document.getElementById("stat-speed")
+        .innerText = speed;
+
+    document.getElementById("stat-range")
+        .innerText = range;
+}
+
+function closePopup() {
+
+    document.getElementById("popup")
+        .style.display = "none";
+}
+
+/* Плавный scroll */
+
+function scrollToModels() {
+
+    document.getElementById("models")
+        .scrollIntoView({
+
+            behavior: "smooth"
+        });
+}
+
+</script>
+
+</body>
+</html>
